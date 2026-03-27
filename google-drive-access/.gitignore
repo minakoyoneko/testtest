@@ -1,0 +1,14 @@
+# 認証情報（絶対にコミットしない）
+credentials/*.json
+!credentials/.gitkeep
+
+# 環境変数
+.env
+
+# ログ
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

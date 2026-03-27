@@ -1,0 +1,52 @@
+# Google Drive AI環境アクセス設定
+
+# APIスコープ設定
+scopes:
+  - "https://www.googleapis.com/auth/drive"
+  - "https://www.googleapis.com/auth/documents"
+  - "https://www.googleapis.com/auth/spreadsheets"
+  - "https://www.googleapis.com/auth/presentations"
+
+# アクセス権限設定
+permissions:
+  drive:
+    read: true
+    write: true
+    create: true
+    delete: false
+  docs:
+    read: true
+    write: true
+    create: true
+  sheets:
+    read: true
+    write: true
+    create: true
+  slides:
+    read: true
+    write: true
+    create: true
+
+# 共有設定
+sharing:
+  default_domain: ""
+  default_role: "writer"  # reader, commenter, writer
+
+# Excel変換設定
+conversion:
+  # アップロード時に自動でGoogle形式に変換するか
+  auto_convert_on_upload: true
+  # 対応フォーマット
+  supported_formats:
+    - ".xlsx"
+    - ".xls"
+    - ".csv"
+    - ".docx"
+    - ".doc"
+    - ".pptx"
+    - ".ppt"
+
+# ログ設定
+logging:
+  level: "INFO"
+  file: "logs/google-drive-access.log"
